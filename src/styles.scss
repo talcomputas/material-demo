@@ -1,8 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/theming";
 
+$custom-typography: mat-typography-config(
+  $font-family: 'Dancing Script, cursive'
+);
+
 // include all mixins (blocks of code) that are not theme related
-@include mat-core();
+@include mat-core($custom-typography);
 
 $teknisk-primary: mat-palette($mat-pink);
 $teknisk-accent:  mat-palette($mat-orange);
