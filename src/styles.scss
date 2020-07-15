@@ -1,9 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/theming";
+
+// include all mixins (blocks of code) that are not theme related
+@include mat-core();
+
+$teknisk-primary: mat-palette($mat-pink);
+$teknisk-accent:  mat-palette($mat-orange);
+
+// The warn palette is optional (defaults to red).
+$teknisk-warn:    mat-palette($mat-gray);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as `color` or `typography`.
+$teknisk-theme: mat-light-theme(
+    $teknisk-primary,
+    $teknisk-accent,
+    $teknisk-warn,
+);
+
+@include angular-material-theme($teknisk-theme);
 
 html, body {
   height: 100%;
 }
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
 }
