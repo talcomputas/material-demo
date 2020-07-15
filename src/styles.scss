@@ -20,6 +20,15 @@ $teknisk-theme: mat-light-theme(
 
 @include angular-material-theme($teknisk-theme);
 
+$special-primary: mat-palette($mat-blue-grey);
+$special-accent:  mat-palette($mat-amber, A200, A100, A400);
+$special-warn:    mat-palette($mat-deep-orange);
+$special-theme:   mat-dark-theme($special-primary, $special-accent, $special-warn);
+
+.special-theme {
+  @include mat-progress-spinner-theme($special-theme);
+}
+
 html, body {
   height: 100%;
 }
